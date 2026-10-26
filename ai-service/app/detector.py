@@ -1,9 +1,4 @@
 """BISINDO (Indonesian sign language) detection with a YOLO11 model exported to ONNX.
-
-The network is an object detector trained by Syizuril
-(https://huggingface.co/Syizuril/YOLO11-BISINDO-Detection) and converted to a 480x480
-int8 ONNX graph by ``export_yolo.py``. It predicts one letter per frame and returns
-"No detection" by itself when no hand is visible, so no separate hand gate is needed.
 """
 
 from __future__ import annotations
