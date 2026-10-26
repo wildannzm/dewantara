@@ -1,4 +1,5 @@
-"""BISINDO (Indonesian sign language) detection with a YOLO11 model exported to ONNX.
+"""
+BISINDO (Indonesian sign language) detection with a YOLO11 model exported to ONNX.
 """
 
 from __future__ import annotations
