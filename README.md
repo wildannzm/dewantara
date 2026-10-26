@@ -57,7 +57,6 @@ DEWANTARA gives these families and community teachers a learning tool that runs 
 - [Getting started](#getting-started)
 - [Configuration](#configuration)
 - [API reference](#api-reference)
-- [Deployment notes](#deployment-notes)
 - [Team](#team)
 - [License](#license)
 
@@ -265,15 +264,6 @@ async def main():
 
 asyncio.run(main())
 ```
-
-## Deployment notes
-
-- Serve the frontend over HTTPS, since browsers block camera access on plain HTTP.
-- Serve the AI service over TLS too. A page loaded from HTTPS cannot open an unencrypted `ws://` connection.
-- If a reverse proxy sits in front of Uvicorn, enable WebSocket upgrades and set a read timeout longer than `IDLE_TIMEOUT_SECONDS`.
-- Add your frontend origin to `ALLOWED_ORIGINS`.
-- Inference is CPU-bound. Raise `MAX_CONCURRENT_INFERENCES` only after you have measured CPU headroom, or run more worker processes.
-- The model file is about 31 MB and is stored in the repository.
 
 ## Team
 
